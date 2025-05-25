@@ -8,6 +8,7 @@ import {
   CardDescription,
   CardContent,
 } from "./components/ui/card";
+import NetlifyFunctionDemo from "./components/NetlifyFunctionDemo";
 
 function App() {
   return (
@@ -110,6 +111,23 @@ function App() {
                 <li>• Customizable with CSS variables</li>
                 <li>• TypeScript support included</li>
               </ul>
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Netlify Functions Demo */}
+        <div className="w-full max-w-6xl mb-16">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-center">
+                Netlify Functions Demo
+              </CardTitle>
+              <CardDescription className="text-center">
+                Test your serverless functions directly from the UI
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <NetlifyFunctionDemo />
             </CardContent>
           </Card>
         </div>
