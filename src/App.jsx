@@ -1,6 +1,5 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Zap, Atom, Palette, Component } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -15,29 +14,14 @@ function App() {
     <div className="min-h-screen bg-background text-foreground flex flex-col">
       <div className="flex-1 flex flex-col items-center justify-start px-4 py-8">
         {/* Header Section */}
-        <div className="flex justify-center items-center gap-8 mb-8">
-          <a
-            href="https://vite.dev"
-            target="_blank"
-            className="hover:opacity-75 transition-opacity"
-          >
-            <img src={viteLogo} className="w-16 h-16" alt="Vite logo" />
-          </a>
-          <a
-            href="https://react.dev"
-            target="_blank"
-            className="hover:opacity-75 transition-opacity"
-          >
-            <img
-              src={reactLogo}
-              className="w-16 h-16 animate-spin [animation-duration:20s]"
-              alt="React logo"
-            />
-          </a>
+        <div className="flex justify-center items-center gap-8">
+          <h1 className="text-4xl font-bold text-foreground">
+            Podojo Starter Kit 2.0
+          </h1>
         </div>
 
-        <div className="text-center mb-16 max-w-4xl">
-          <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+        <div className="text-center mb-8 max-w-4xl">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
             Modern React Stack
           </h1>
           <p className="text-xl text-muted-foreground">
@@ -52,7 +36,7 @@ function App() {
           <Card className="hover:shadow-lg transition-shadow duration-300 text-center">
             <CardHeader>
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <img src={reactLogo} className="w-8 h-8" alt="React" />
+                <Atom className="w-8 h-8 text-blue-600" />
               </div>
               <CardTitle className="text-blue-600">React</CardTitle>
               <CardDescription>
@@ -74,7 +58,7 @@ function App() {
           <Card className="hover:shadow-lg transition-shadow duration-300 text-center">
             <CardHeader>
               <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-500 rounded"></div>
+                <Palette className="w-8 h-8 text-cyan-600" />
               </div>
               <CardTitle className="text-cyan-600">Tailwind CSS</CardTitle>
               <CardDescription>
@@ -96,7 +80,7 @@ function App() {
           <Card className="hover:shadow-lg transition-shadow duration-300 text-center">
             <CardHeader>
               <div className="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
-                <div className="w-8 h-8 bg-gradient-to-br from-slate-400 to-slate-600 rounded-lg"></div>
+                <Component className="w-8 h-8 text-slate-600" />
               </div>
               <CardTitle className="text-slate-600">shadcn/ui</CardTitle>
               <CardDescription>

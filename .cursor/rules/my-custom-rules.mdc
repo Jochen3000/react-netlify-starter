@@ -73,6 +73,7 @@ This is a React 19 application built with Vite, deployed on Netlify with serverl
 ## Development Workflow
 
 - Use `npm run netlify:dev` for development
+- Run this command in the shell
 
 ## Avoid
 
