@@ -1,0 +1,83 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# React + Netlify Starter Cursor Rules
+
+## Project Overview
+
+This is a React 19 application built with Vite, deployed on Netlify with serverless functions. The project uses Tailwind CSS for styling, shadcn/ui for components, and follows modern React patterns.
+
+## Tech Stack
+
+- **Frontend**: React 19, Vite, JSX
+- **Styling**: Tailwind CSS, shadcn/ui components
+- **Backend**: Netlify Functions (serverless)
+- **Deployment**: Netlify
+- **Icons**: Lucide React
+- **Linting**: ESLint
+
+## Code Style Guidelines
+
+### General
+
+- Keep comments sparse - code should be self-documenting
+- Keep code simple - avoid unnecessary complexity
+- No try/catch blocks unless specifically requested
+- Use modern JavaScript/React patterns
+- Prefer functional components and hooks
+
+### React Specific
+
+- Use JSX (not TSX) - this project doesn't use TypeScript
+- Use functional components with hooks
+- Use React 19 features when appropriate
+- Follow React naming conventions (PascalCase for components)
+- Keep components focused and single-responsibility
+
+### File Structure
+
+- Components go in `src/components/`
+- UI components (shadcn/ui) go in `src/components/ui/`
+- Utilities go in `src/lib/`
+- Netlify functions go in `netlify/functions/`
+
+### Styling
+
+- Use Tailwind CSS classes for styling
+- Follow Tailwind's utility-first approach
+- Use shadcn/ui components when available
+- Leverage CSS variables defined in `src/index.css`
+- Use `clsx` and `tailwind-merge` for conditional classes
+
+### Component Patterns
+
+- Use shadcn/ui components from `src/components/ui/`
+- Import icons from `lucide-react`
+- Use class-variance-authority (cva) for component variants
+- Follow the existing button and card component patterns
+
+### Netlify Functions
+
+- Place serverless functions in `netlify/functions/`
+- Use modern JavaScript (ES modules)
+- Follow the existing function patterns for consistency
+- Handle CORS appropriately for API endpoints
+
+### Secrets, Environment variables
+
+- Store secrets in .env and access them via the backend
+- To write to .env you need to use the console
+
+## Development Workflow
+
+- Use `npm run netlify:dev` for development
+
+## Avoid
+
+- TypeScript syntax (this is a JavaScript project)
+- Inline styles (use Tailwind classes)
+- Class components (use functional components)
+- Overly complex state management
+- Unnecessary dependencies
