@@ -13,13 +13,20 @@ A modern React application built with Vite, Tailwind CSS, shadcn/ui components, 
 
 ## Getting Started
 
-1. **Clone and install dependencies:**
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd react-netlify-starter
+   ```
+
+2. **Install dependencies:**
 
    ```bash
    npm install
    ```
 
-2. **Set up Gemini API (for chat functionality):**
+3. **Set up Gemini API (for chat functionality):**
 
    - Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
    - Update the `.env` file:
@@ -27,13 +34,13 @@ A modern React application built with Vite, Tailwind CSS, shadcn/ui components, 
      GEMINI_API_KEY=your_actual_api_key_here
      ```
 
-3. **Start development server:**
+4. **Start development server:**
 
    ```bash
    npm run netlify:dev
    ```
 
-4. **Open your browser:**
+5. **Open your browser:**
    Navigate to `http://localhost:8888`
 
 ## Project Structure
