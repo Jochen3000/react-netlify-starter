@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { Zap, Atom, Palette, Component, Server } from "lucide-react";
+import {
+  Zap,
+  Atom,
+  Palette,
+  Component,
+  Server,
+  MessageCircle,
+} from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -8,6 +15,7 @@ import {
   CardContent,
 } from "./components/ui/card";
 import NetlifyFunctionDemo from "./components/NetlifyFunctionDemo";
+import ChatWindow from "./components/ChatWindow";
 
 function App() {
   return (
@@ -116,6 +124,25 @@ function App() {
             </CardHeader>
             <CardContent>
               <NetlifyFunctionDemo />
+            </CardContent>
+          </Card>
+        </div>
+
+        {/* Chat with Gemini Demo */}
+        <div className="w-full max-w-6xl mb-16">
+          <Card>
+            <CardHeader>
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <MessageCircle className="w-8 h-8 text-purple-600" />
+              </div>
+              <CardTitle className="text-center">Chat with Gemini AI</CardTitle>
+              <CardDescription className="text-center">
+                Interactive chat interface powered by Google's Gemini 2.5 Flash
+                model
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <ChatWindow />
             </CardContent>
           </Card>
         </div>

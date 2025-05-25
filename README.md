@@ -1,12 +1,57 @@
-# React + Vite
+# React + Netlify Starter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application built with Vite, Tailwind CSS, shadcn/ui components, and Netlify Functions. Features include a beautiful UI and AI chat integration with Google's Gemini 2.0 Flash model.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** with Vite for fast development
+- **Tailwind CSS** for utility-first styling
+- **shadcn/ui** components for beautiful, accessible UI
+- **Netlify Functions** for serverless backend
+- **Gemini AI Chat** integration for interactive conversations
+- **Modern development** with ESLint and hot reload
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone and install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+2. **Set up Gemini API (for chat functionality):**
+
+   - Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+   - Update the `.env` file:
+     ```
+     GEMINI_API_KEY=your_actual_api_key_here
+     ```
+
+3. **Start development server:**
+
+   ```bash
+   npm run netlify:dev
+   ```
+
+4. **Open your browser:**
+   Navigate to `http://localhost:8888`
+
+## Project Structure
+
+- `src/components/` - React components
+- `src/components/ui/` - shadcn/ui components
+- `netlify/functions/` - Serverless functions
+- `src/lib/` - Utility functions
+
+## Available Scripts
+
+- `npm run netlify:dev` - Start development server with Netlify Functions
+- `npm run build` - Build for production
+- `npm run netlify:deploy` - Deploy to Netlify
+
+## Tech Stack
+
+- **Frontend**: React 19, Vite, Tailwind CSS, shadcn/ui
+- **Backend**: Netlify Functions
+- **AI**: Google Gemini 2.0 Flash
+- **Icons**: Lucide React
