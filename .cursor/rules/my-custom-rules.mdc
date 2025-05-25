@@ -74,6 +74,7 @@ This is a React 19 application built with Vite, deployed on Netlify with serverl
 
 - Use `npm run netlify:dev` for development
 - Run this command in the shell
+- Git commit messages should be short
 
 ## Avoid
 

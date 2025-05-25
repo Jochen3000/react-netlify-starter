@@ -1,48 +1,39 @@
 export const handler = async (event, context) => {
-    const { httpMethod, queryStringParameters, body } = event;
+    const { httpMethod, queryStringParameters } = event;
 
-    if (httpMethod === 'GET') {
+    const headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS'
+    };
+
+    // Handle CORS preflight
+    if (httpMethod === 'OPTIONS') {
         return {
             statusCode: 200,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
-            },
-            body: JSON.stringify({
-                message: 'Hello from Netlify Functions!',
-                timestamp: new Date().toISOString(),
-                query: queryStringParameters
-            })
+            headers,
+            body: ''
         };
     }
 
-    if (httpMethod === 'POST') {
-        const data = JSON.parse(body || '{}');
+    if (httpMethod === 'GET') {
+        const name = queryStringParameters?.name || 'World';
 
         return {
             statusCode: 200,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE'
-            },
+            headers,
             body: JSON.stringify({
-                message: 'Data received successfully!',
-                receivedData: data,
-                timestamp: new Date().toISOString()
+                message: `Hello, ${name}!`,
+                timestamp: new Date().toISOString(),
+                function: 'hello'
             })
         };
     }
 
     return {
         statusCode: 405,
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin': '*'
-        },
+        headers,
         body: JSON.stringify({ error: 'Method not allowed' })
     };
 }; 

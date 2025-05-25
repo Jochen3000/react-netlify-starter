@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Zap, Atom, Palette, Component } from "lucide-react";
+import { Zap, Atom, Palette, Component, Server } from "lucide-react";
 import {
   Card,
   CardHeader,
@@ -99,15 +99,19 @@ function App() {
           </Card>
         </div>
 
-        {/* Netlify Functions Demo */}
+        {/* Netlify Backend Demo */}
         <div className="w-full max-w-6xl mb-16">
           <Card>
             <CardHeader>
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4 mx-auto">
+                <Server className="w-8 h-8 text-green-600" />
+              </div>
               <CardTitle className="text-center">
-                Netlify Functions Demo
+                Netlify Backend Demo
               </CardTitle>
               <CardDescription className="text-center">
-                Test your serverless functions directly from the UI
+                Using Netlify serverless functions to make secure API calls in
+                the backend and store secrets safely with environment variables
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -115,10 +119,6 @@ function App() {
             </CardContent>
           </Card>
         </div>
-
-        <p className="text-center text-muted-foreground">
-          Built with ❤️ using Vite + React + Tailwind + shadcn/ui
-        </p>
       </div>
     </div>
   );

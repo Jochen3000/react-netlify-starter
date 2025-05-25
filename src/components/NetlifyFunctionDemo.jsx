@@ -10,46 +10,7 @@ export default function NetlifyFunctionDemo() {
     setError(null);
 
     try {
-      const res = await fetch("/.netlify/functions/hello?name=World");
-      const data = await res.json();
-      setResponse(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const callApiFunction = async (endpoint) => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const res = await fetch(`/.netlify/functions/api${endpoint}`);
-      const data = await res.json();
-      setResponse(data);
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const createUser = async () => {
-    setLoading(true);
-    setError(null);
-
-    try {
-      const res = await fetch("/.netlify/functions/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: "New User",
-          email: "newuser@example.com",
-        }),
-      });
+      const res = await fetch("/.netlify/functions/hello?name=Developer");
       const data = await res.json();
       setResponse(data);
     } catch (err) {
@@ -100,39 +61,15 @@ export default function NetlifyFunctionDemo() {
 
   return (
     <div className="p-6 max-w-2xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Netlify Functions Demo</h2>
+      <p className="text-muted-foreground mb-6">Here are some examples</p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
         <button
           onClick={callHelloFunction}
           disabled={loading}
           className="bg-blue-500 hover:bg-blue-600 disabled:bg-blue-300 text-white px-4 py-2 rounded"
         >
-          Call Hello Function
-        </button>
-
-        <button
-          onClick={() => callApiFunction("/status")}
-          disabled={loading}
-          className="bg-green-500 hover:bg-green-600 disabled:bg-green-300 text-white px-4 py-2 rounded"
-        >
-          Check API Status
-        </button>
-
-        <button
-          onClick={() => callApiFunction("/users")}
-          disabled={loading}
-          className="bg-purple-500 hover:bg-purple-600 disabled:bg-purple-300 text-white px-4 py-2 rounded"
-        >
-          Get Users
-        </button>
-
-        <button
-          onClick={createUser}
-          disabled={loading}
-          className="bg-orange-500 hover:bg-orange-600 disabled:bg-orange-300 text-white px-4 py-2 rounded"
-        >
-          Create User
+          Hello Function
         </button>
 
         <button
