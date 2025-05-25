@@ -48,8 +48,7 @@ This is a React 19 application built with Vite, deployed on Netlify with serverl
 - Use Tailwind CSS classes for styling
 - Follow Tailwind's utility-first approach
 - Use shadcn/ui components when available
-- Leverage CSS variables defined in `src/index.css`
-- Use `clsx` and `tailwind-merge` for conditional classes
+- If there are install conflicts between shadcn and React 19 use `--legacy-peer-deps`
 
 ### Component Patterns
 
